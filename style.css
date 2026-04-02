@@ -1,0 +1,115 @@
+ @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Poppins',sans-serif;
+    }
+    body{
+        background-color: #08090A;
+        color: white;
+        margin: 3%;
+    }
+    main{
+        position: relative;
+        padding: 50px;
+        box-shadow: 20px 20px black;
+        animation: aparecer 1s alternate backwards ease;
+
+        & #name{
+            color: #2ff;
+        }
+        & #last-name{
+            color: #48e;
+        }
+
+    }
+    main::before{
+        content: '';
+        position: absolute;
+        inset: 0;
+        border-radius: 20px;
+        border: 1px solid #FF220C;
+        z-index: -1;
+        animation: parpadear 4s  infinite ease-in-out;
+        
+    }
+    .title{
+        color: #FF220C;
+    }
+    #presentation{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    ul,ol{
+        padding-left: 30px;
+    }
+    .title,
+    main>p:nth-of-type(1n)
+    {
+        color: #FF220C;
+        font-weight: bolder;
+        text-shadow: 2px 2px black;
+        padding-top: 20px;
+    }
+    #presentation p{
+        padding: 9px 0;
+    }
+
+    table{
+        width: 100%;
+        
+        box-shadow: 0 10px 25px #111;
+        text-align: center;
+        & thead{
+            background:linear-gradient(45deg,#1C1F33);
+        }
+    }
+
+
+
+
+    @keyframes parpadear{
+        0%{
+            filter: drop-shadow(0 0 0 #FF220C);
+        }
+        20%{
+            filter: drop-shadow(0 0 0 #FF220C);
+        }
+        25%{
+            filter: drop-shadow(0 0px 5px #FF220C)
+            drop-shadow(0 0px 15px #FF220C)
+        }
+        35%{
+                filter: drop-shadow(0 0 10px #FF220C)
+                drop-shadow(0 0 25px #FF220C)
+                drop-shadow(0 0 50px #FF220C);
+        }
+        60%{
+                filter: drop-shadow(0 0 10px #FF220C)
+                drop-shadow(0 0 25px #FF220C)
+                drop-shadow(0 0 50px #FF220C);
+        }
+        70%{
+            filter: drop-shadow(0 0 5px #FF220C);
+        }
+        80%{
+            filter: drop-shadow(0 0 0px #FF220C);
+        }
+        100%{
+            filter: drop-shadow(0 0 0 #FF220C)
+        }
+    }
+
+    @keyframes aparecer{
+        from{
+            transform: translateY(-100px);
+            opacity: 0;
+        }
+        to{
+            transform: translateY(0);
+            opacity: 1;
+        }
+    }
