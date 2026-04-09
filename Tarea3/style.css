@@ -199,7 +199,18 @@ main #inicio-DC{
     flex-direction: column;
     gap: 30px;
 }
-
+main figure{
+    /* background-color: red; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+main figure img{
+    width: 500px;
+    box-shadow: 0 0 10px red;
+}
 main #inicio-MO .card > ul {
         padding-left: 30px;
 }
